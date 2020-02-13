@@ -15,8 +15,8 @@ class PizzaRestaurant {
     this.waiters = ["W1", "W2"].map(name => new Waiter(name));
   }
 
-  listenToClients() {
-
+  listenToClients(orders) {
+    
   }
 
 }

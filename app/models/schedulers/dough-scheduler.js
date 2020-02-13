@@ -9,7 +9,7 @@ class DoughScheduler extends PersonnelScheduler {
   }
 
   push(order) {
-    super.push(order);
+    return super.push(order);
   }
 
 }
