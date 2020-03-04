@@ -1,8 +1,10 @@
 
-const PizzaMaker = require("./pizza-maker");
-const { Logger } = require("../../logs/log-file");
+import { PizzaMaker } from "./pizza-maker";
+import { Logger } from "../../logs/logger";
 
-class Waiter extends PizzaMaker {
+export class Waiter extends PizzaMaker {
+
+  name: string;
 
   constructor(name) {
     super(5000); // 10 seconds to deliver the pizza
@@ -18,4 +20,3 @@ class Waiter extends PizzaMaker {
 
 }
 
-module.exports = Waiter;

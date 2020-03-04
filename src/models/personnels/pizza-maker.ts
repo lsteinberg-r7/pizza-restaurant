@@ -1,6 +1,10 @@
 
+import { Logger } from "../../logs/logger";
 
-class PizzaMaker {
+export class PizzaMaker {
+
+  prepTime: number;
+  isBusy: boolean;
   
   constructor(prepTime) {
     this.prepTime = prepTime;
@@ -29,4 +33,3 @@ class PizzaMaker {
 
 }
 
-module.exports = PizzaMaker;

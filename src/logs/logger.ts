@@ -1,8 +1,7 @@
 
+import * as winston from "winston";
 
-const winston = require("winston");
-
-const Logger = winston.createLogger({
+export const Logger = winston.createLogger({
   level: 'info',
   format: winston.format.combine(
     winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
@@ -16,4 +15,3 @@ const Logger = winston.createLogger({
 
 Logger.info("######### Pizza restaurant is open ##########");
 
-module.exports = Logger;

@@ -1,5 +1,10 @@
 
-class PersonnelScheduler {
+export class PersonnelScheduler {
+
+  group: any[];
+  waitingOrders: any[];
+  private _intervalTime: number;
+  private _interval: NodeJS.Timeout;
 
   constructor(names, PersonnelType) {
     this.group = names.map(name => new PersonnelType(name));
@@ -9,10 +14,16 @@ class PersonnelScheduler {
     this._interval = setInterval(this._processWaitingList, this._intervalTime);
   }
 
+  kill() {
+    if (this._interval) {
+      clearInterval(this._interval);
+    }
+  }
+
   push(order) {
     const availablePersonnels = this.group.filter(personnel => !personnel.isBusy);
     if (!availablePersonnels.length) {
-      this.waitingOrders.shift(order);
+      this.waitingOrders.unshift(order);
     }
     availablePersonnels[0].prepare(order);
   }
@@ -27,4 +38,3 @@ class PersonnelScheduler {
   
 }
 
-module.exports = PersonnelScheduler;

@@ -1,8 +1,11 @@
 
-const PizzaMaker = require("./pizza-maker");
-const { Logger } = require("../../logs/log-file");
+import { PizzaMaker } from "./pizza-maker";
+import { Logger } from "../../logs/logger";
 
-class ToppingChef extends PizzaMaker {
+export class ToppingChef extends PizzaMaker {
+
+  name: string;
+  toppingCount: number;
 
   constructor(name) {
     super(4000); // 4 seconds prepTime
@@ -31,4 +34,3 @@ class ToppingChef extends PizzaMaker {
 
 }
 
-module.exports = ToppingChef;
