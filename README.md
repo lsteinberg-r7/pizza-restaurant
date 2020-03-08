@@ -1,11 +1,11 @@
 # Pizza-Restaurant
-Implementing a pizza restaurant management system
+Implementing a pizza restaurant management system.
 
 The pizza restaurant is composed of the following personnels:
 - 2 Dough chefs - each one has a 7 seconds dough preparation time
-- 3 topping chefs - each one has 4 seconds to put toppings on a pizza
-- 1 oven - has a 10 seconds preparation time
-- 2 waiters - each one serves the pizza in 5 seconds.
+- 3 Topping chefs - each one has 4 seconds to put toppings on a pizza
+- 1 Oven - has a 10 seconds preparation time
+- 2 Waiters - each one serves the pizza within 5 seconds
 
 ### Running the restaurant locally
 
@@ -29,8 +29,8 @@ Both in the Docker case and in the local case, the application receives pizza or
 A pizza order is of the following schema:
 > [{"name": "<PIZZA_NAME>", "toppings": ["<TOP_1>", "<TOP_2>", ...]}, ... ]
 
-The application prints the progress of the order to the standard output and to a log file as well.
-The file is visibile in <strong>/var/log/pizza-restaurant.log</strong>
+The application prints the progress of the order to the standard output, as well as to a log file.
+The file is visible in <strong>/var/log/pizza-restaurant.log</strong>
 
 The application will be closed upon Ctrl-C, with an appropriate message.
 
