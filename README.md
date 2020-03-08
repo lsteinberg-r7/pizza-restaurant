@@ -1,4 +1,4 @@
-# Pizza-Restaurant
+# Pizza Restaurant
 Implementing a pizza restaurant management system.
 
 The pizza restaurant is composed of the following personnels:
