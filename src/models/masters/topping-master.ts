@@ -21,4 +21,4 @@ class ToppingMaster extends PersonnelMaster {
 
 }
 
-export const toppingMaster = new ToppingMaster(PizzaConfig.topping);
+export const toppingMaster = new ToppingMaster(PizzaConfig.topping.names);

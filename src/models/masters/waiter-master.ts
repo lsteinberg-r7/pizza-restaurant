@@ -21,4 +21,4 @@ class WaiterMaster extends PersonnelMaster {
 
 }
 
-export const waiterMaster = new WaiterMaster(PizzaConfig.waiter);
+export const waiterMaster = new WaiterMaster(PizzaConfig.waiter.names);

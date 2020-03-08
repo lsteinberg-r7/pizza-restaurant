@@ -17,9 +17,9 @@ class Clock extends EventEmitter {
 
   toc(id: string) {
     const pizza = this._pizzas.get(id);
-    pizza.ellapsed = Date.now() - pizza.start;
+    pizza.ellapsed = Math.floor((Date.now() - pizza.start) / 1000);
     this._pizzas.set(id, pizza);
-    return Math.floor(pizza.ellapsed / 1000);
+    return pizza.ellapsed;
   }
 
   totalTime() {

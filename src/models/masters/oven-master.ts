@@ -21,4 +21,4 @@ class OvenMaster extends PersonnelMaster {
 
 }
 
-export const ovenMaster = new OvenMaster(PizzaConfig.oven);
+export const ovenMaster = new OvenMaster(PizzaConfig.oven.names);

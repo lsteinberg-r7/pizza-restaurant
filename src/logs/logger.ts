@@ -8,10 +8,8 @@ export const Logger = winston.createLogger({
     winston.format.simple()
   ),
   transports: [
-    new winston.transports.File({ filename: 'pizza-restaurant.log' }),
-    // new winston.transports.Console()
+    new winston.transports.File({ filename: '/var/log/pizza-restaurant.log' }),
+    new winston.transports.Console()
   ]
 });
-
-Logger.info("######### Pizza restaurant is open ##########");
 

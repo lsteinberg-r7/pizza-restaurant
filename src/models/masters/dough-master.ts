@@ -21,5 +21,5 @@ class DoughMaster extends PersonnelMaster {
 
 }
 
-export const doughMaster = new DoughMaster(PizzaConfig.dough);
+export const doughMaster = new DoughMaster(PizzaConfig.dough.names);
 

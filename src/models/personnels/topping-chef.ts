@@ -1,6 +1,7 @@
 
 import { PizzaPersonnel } from "./personnel";
 import { Pizza } from "../pizza";
+import { PizzaConfig } from "../../config/config";
 
 export class ToppingChef extends PizzaPersonnel {
 
@@ -8,7 +9,7 @@ export class ToppingChef extends PizzaPersonnel {
   toppingCount: number;
 
   constructor(name: string) {
-    super(4000); // 4 seconds prepTime
+    super(PizzaConfig.topping.prepTime);
     this.name = name;
     this.toppingCount = 0;
   }

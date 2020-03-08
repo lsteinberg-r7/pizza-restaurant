@@ -1,13 +1,14 @@
 
 import { PizzaPersonnel } from "./personnel";
 import { Pizza } from "../pizza";
+import { PizzaConfig } from "../../config/config";
 
 export class Waiter extends PizzaPersonnel {
 
   name: string;
 
   constructor(name: string) {
-    super(5000); // 10 seconds to deliver the pizza
+    super(PizzaConfig.waiter.prepTime);
     this.name = name;
   }
 
