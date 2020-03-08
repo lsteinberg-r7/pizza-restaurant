@@ -5,14 +5,14 @@ const externals = nodeExternals({
 
 module.exports = {
     entry: {
-        main: "./src/main.ts"
+        main: "./src/pizza-restaurant.ts"
     },
     target: 'node',
     node: {
         __dirname: false,
     },
     output: {
-        filename: "[name].js",
+        filename: "main.js",
         path: __dirname + "/dist"
     },
     resolve: {

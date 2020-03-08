@@ -1,17 +1,17 @@
 
 import { Logger } from "../../logs/logger";
 
-export class PizzaMaker {
+export abstract class PizzaPersonnel {
 
   prepTime: number;
   isBusy: boolean;
   
-  constructor(prepTime) {
+  constructor(prepTime: number) {
     this.prepTime = prepTime;
     this.isBusy = false;
   }
 
-  process(step) {
+  process(step: any) {
     Logger.info(step.start);
     return new Promise(resolve => {
       if (typeof step.preTask === "function") {
@@ -31,5 +31,6 @@ export class PizzaMaker {
     })
   }
 
+  abstract async prepare(pizza): Promise<void>;
 }
 

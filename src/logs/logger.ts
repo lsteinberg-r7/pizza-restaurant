@@ -9,7 +9,7 @@ export const Logger = winston.createLogger({
   ),
   transports: [
     new winston.transports.File({ filename: 'pizza-restaurant.log' }),
-    new winston.transports.Console()
+    // new winston.transports.Console()
   ]
 });
 

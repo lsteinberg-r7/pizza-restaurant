@@ -1,20 +1,20 @@
 
-import { PizzaMaker } from "./pizza-maker";
-import { Logger } from "../../logs/logger";
+import { PizzaPersonnel } from "./personnel";
+import { Pizza } from "../pizza";
 
-export class Waiter extends PizzaMaker {
+export class Waiter extends PizzaPersonnel {
 
   name: string;
 
-  constructor(name) {
+  constructor(name: string) {
     super(5000); // 10 seconds to deliver the pizza
     this.name = name;
   }
 
-  async prepare() {
+  async prepare(pizza: Pizza): Promise<any> {
     return super.process({
-      start: `Waiter ${this.name} is delivering a pizza`,
-      end: `Waiter ${this.name} delivered a pizza!`
+      start: `Waiter ${this.name} is delivering pizza ${pizza.id}`,
+      end: `Waiter ${this.name} delivered pizza ${pizza.id}!`
     })
   }
 
